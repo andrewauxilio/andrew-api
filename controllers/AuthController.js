@@ -11,7 +11,7 @@ const config = require('../config/env.config');
 const jwtSecret = config.jwt_secret
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-//const uuid = require('uuid');
+const uuid = require('uuid');
 
 //Login Function
 exports.login = (req, res) => {
