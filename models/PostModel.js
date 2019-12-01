@@ -10,6 +10,7 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema({
     title: { type: String, required: true },
     image: { type: String },
+    summary: { type: String, required: true },
     content: { type: String, required: true },
     author: { type: String, required: true },
     date: { type: Date, default: Date.now },
@@ -48,6 +49,7 @@ exports.createPost = (postData) => {
 exports.list = (perPage, page) => {
     return new Promise((resolve, reject) => {
         Post.find()
+            .sort({date: -1})
             .limit(perPage)
             .skip(perPage * page)
             .exec(function (err, posts) {
