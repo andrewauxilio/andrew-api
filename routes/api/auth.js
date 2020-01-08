@@ -15,7 +15,7 @@ const VerifyUserMiddleware = require('../../middleware/auth/verify.user.middlewa
 
 exports.routesConfig = function (app) {
     app.post('/auth', [
-        VerifyUserMiddleware.hasAuthValidFields,
+        // VerifyUserMiddleware.hasAuthValidFields,
         VerifyUserMiddleware.isPasswordAndUserMatch,
         AuthController.login
     ]);
