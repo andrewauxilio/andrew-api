@@ -23,7 +23,7 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.10",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "uuid": "^3.3.3",
     "validator": "^12.0.0"
   }
